@@ -1,0 +1,22 @@
+.nav-button:focus {
+  outline: none !important;
+}
+.section {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffffff;
+}
+#wrapper {
+  color: #ffffff;
+  list-style-type: none, 
+
+}
+.open {
+  display: block;
+}
+.close {
+  display: none !important;
+}
+#list {
+  list-style-type: none,   
+}
