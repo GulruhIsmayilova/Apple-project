@@ -14,6 +14,7 @@
 .custom-list-style {
   list-style-type: none;
   padding-left: 0;
+  padding-right: 20px;
 }
 .centered-section {
   text-align: center;
@@ -26,4 +27,40 @@
 }
 .custom-content {
   text-align: center;
+}
+
+.image-container {
+  text-align: center;
+  position: relative;
+}
+
+.image {
+  width: 100vw;
+  height: 75vh;
+}
+
+.text-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 45px;
+  text-align: center;
+}
+
+.overlay-text {
+  margin: 0;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.overlay-text:nth-child(2) {
+  margin: 5px 0;
+  font-size: 24px;
+}
+
+.learn-more-link {
+  text-decoration: none;
+  color: #007bff;
+  font-size: 20px;
 }

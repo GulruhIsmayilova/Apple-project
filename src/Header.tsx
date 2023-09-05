@@ -46,7 +46,7 @@ const Header = () => {
                 "Mac Pro",
                 "Displays",
               ]}
-              submenuSndItems={["Mac support", "iCloud+"]}
+              submenuSndItems={["Mac support", "iCloud+","Continuity","Mac for Business"]}
               setSndItems={setSndItems}
             />
             <HoverMenuButton
@@ -62,6 +62,8 @@ const Header = () => {
                 "Apple Pencil",
                 "Keyboards",
               ]}
+              submenuSndItems={["iPad support", "iCloud+"]}
+              setSndItems={setSndItems}
             />
             <HoverMenuButton
               label="iPhone"
@@ -75,6 +77,8 @@ const Header = () => {
                 "iPhone 13 ",
                 "iPhone 12",
               ]}
+              submenuSndItems={["iPhone Support", "iPhone Privacy","iCloud+"]}
+              setSndItems={setSndItems}
             />
             <HoverMenuButton
               label="Watch"
@@ -87,6 +91,8 @@ const Header = () => {
                 "Apple Watch SE",
                 "Apple Watch Nike",
               ]}
+              submenuSndItems={["Apple Watch Support "]}
+              setSndItems={setSndItems}
             />
             <HoverMenuButton
               label=" AirPods"
@@ -99,6 +105,8 @@ const Header = () => {
                 "AirPods Pro 3rd generation",
                 "AirPods Max",
               ]}
+              submenuSndItems={["AirPods Support, Apple Music "]}
+              setSndItems={setSndItems}
             />
 
             <HoverMenuButton
@@ -112,6 +120,8 @@ const Header = () => {
                 "Apple TV app",
                 "Apple TV+",
               ]}
+              submenuSndItems={["Explore TV& Home, Apple TV 4K"]}
+              setSndItems={setSndItems}
             />
 
             <HoverMenuButton
@@ -127,6 +137,8 @@ const Header = () => {
                 "Apple Books",
                 "App Store",
               ]}
+              submenuSndItems={["Apple TV + Support","Apple Music Support"]}
+              setSndItems={setSndItems}
             />
 
             <HoverMenuButton
@@ -142,13 +154,19 @@ const Header = () => {
                 "Music",
                 "TV",
               ]}
+              submenuSndItems={["Apple TV + Support","Apple Music Support"]}
+              setSndItems={setSndItems}
+              
             />
             <HoverMenuButton
               label=" Where to Buy"
               setIsWrapperOpen={setIsWrapperOpen}
               setItems={setItems}
               submenuItems={["Authorixed Resellers", "Service & Support"]}
+              submenuSndItems={["Apple TV + Support","Apple Music Support"]}
+              setSndItems={setSndItems}
             />
+            
           </nav>
           <div>
             <div className="search-icon">
@@ -167,7 +185,10 @@ const Header = () => {
           onMouseEnter={() => setIsWrapperOpen(true)}
           onMouseLeave={() => setIsWrapperOpen(false)}
         >
-          <Box component="main">
+          <Box
+            component="main"
+            style={{ display: "flex", flexDirection: "row" }}
+          >
             <ul id="list" className="custom-list-style">
               {items.map((item) => (
                 <li key={item}>{item}</li>
@@ -175,78 +196,13 @@ const Header = () => {
             </ul>
             <ul id="list" className="custom-list-style">
               {itemsSnd.map((item) => (
-                <li key={item}>{item}</li>
+                <li key={item}><small>{item}</small></li>
               ))}
             </ul>
           </Box>
         </Container>
       </AppBar>
-      <Container sx={{ width: "100vw", textAlign: "center" }}>
-        <Box component="main" sx={{ p: 10, textAlign: "center" }}>
-          <section className="section">
-            <h2 className="title">iPhone 14</h2>
-            <p className="paragraph">Big and bigger.</p>
-            <a href="#" className="link">
-              Learn more.
-            </a>
-          </section>
-        </Box>
-      </Container>
-      <figure>
-        <Box
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            width: "100vw",
-          }}
-        >
-          <img
-            src="/src/image/hero_macbook_air_15_midnight__ct0pgwizvree_mediumtall.jpg"
-            alt="Apple Logo"
-            style={{ height: "100%", width: "100%" }}
-          />
-        </Box>
-
-        <figcaption
-          style={{
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            color: "grey",
-            padding: "10px",
-            fontSize: "24px",
-            textAlign: "center",
-          }}
-        >
-          <Container sx={{ width: "100vw", textAlign: "center" }}>
-            <Box component="main" sx={{ textAlign: "center" }}>
-              <section className="section">
-                <h2 className="title">iPhone 14</h2>
-                <p className="paragraph">Wonderfull.</p>
-                <a href="#" className="link">
-                  Learn more.
-                </a>
-              </section>
-            </Box>
-          </Container>
-        </figcaption>
-      </figure>
-      <Box
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          width: "100vw",
-        }}
-      >
-        <img
-          src="/src/image/promo_apple_watch_series_8_spring__d9hfvufh7hyu_small_2x.jpg"
-          alt="Apple Logo"
-          style={{ height: "100%", width: "100%" }}
-        />
-      </Box>
+ 
     </div>
   );
 };
