@@ -20,6 +20,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"],
+  "include": ["src", "ImageCard.tsx", "src/main.tsx", "styles.tsx", "vite-env.d.ts", "WhereToBuy.tsx", "Image.tsx", "Header.tsx", "HoverMenuButton.tsx", "Footer.tsx", "App.tsx", "ExploreIpad.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

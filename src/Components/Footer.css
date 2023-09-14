@@ -1,0 +1,49 @@
+/* footer.css */
+
+/* Footer bileşeninin ana konteynerini stilleyin */
+
+.footer-container {
+  background-color: #f5f5f7; /* Arka plan rengini değiştirin */
+  color: #0a0a0c; /* Metin rengini beyaza ayarlayın */
+  padding: 100px; /* İsteğe bağlı bir iç kenarlık ekleyin */
+  text-decoration: none;
+  width: 90vw;
+  margin-top: 30px;
+}
+
+/* Listeleri stilleyin */
+.footer-list {
+  list-style: none; /* Noktalama işaretlerini kaldırın */
+  padding: 0; /* Listenin iç kenarlığını kaldırın */
+  color: #050505;
+  text-decoration: none;
+}
+
+.footer-item {
+  margin-bottom: 8px; /* Her liste öğesi arasında biraz boşluk bırakın */
+  color: #0f0e0e;
+  line-height: 1.5;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+/* Bağlantıları stilleyin */
+a {
+  color: #26262c; /* Bağlantı rengini beyaza ayarlayın */
+  text-decoration: none; /* Alt çizgiyi kaldırın */
+}
+
+a:hover {
+  text-decoration: underline; /* Fare üzerine geldiğinde alt çizgi ekleyin */
+}
+
+ul.footer-list {
+  list-style-type: none;
+  padding: 0;
+  text-decoration: none;
+}
+
+ul.footer-list li a {
+  color: #000000; /* Metin rengini istediğiniz renkle değiştirin */
+  text-decoration: none;
+}

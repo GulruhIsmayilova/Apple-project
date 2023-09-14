@@ -1,6 +1,7 @@
 import { AppBar, Box, Container, IconButton, Toolbar } from "@mui/material";
 import { useState } from "react";
 import { FaApple, FaSearch, FaShoppingBag } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import "./Header.css";
 import HoverMenuButton from "./HoverMenuButton";
 
@@ -25,10 +26,12 @@ const Header = () => {
             height: "44px",
           }}
         >
+          <Link to="/">
           <IconButton className="nav-button">
             <FaApple style={{ color: "white" }} />
             <span className="logo-text"></span>
           </IconButton>
+          </Link>
           <nav
             className="nav-list"
             style={{ display: "flex", alignItems: "center", gap: 2 }}
@@ -46,7 +49,12 @@ const Header = () => {
                 "Mac Pro",
                 "Displays",
               ]}
-              submenuSndItems={["Mac support", "iCloud+","Continuity","Mac for Business"]}
+              submenuSndItems={[
+                "Mac support",
+                "iCloud+",
+                "Continuity",
+                "Mac for Business",
+              ]}
               setSndItems={setSndItems}
             />
             <HoverMenuButton
@@ -65,8 +73,11 @@ const Header = () => {
               submenuSndItems={["iPad support", "iCloud+"]}
               setSndItems={setSndItems}
             />
+
+<Link to="iphone-14">
             <HoverMenuButton
-              label="iPhone"
+             
+             label="iPhone"
               setIsWrapperOpen={setIsWrapperOpen}
               setItems={setItems}
               submenuItems={[
@@ -77,9 +88,10 @@ const Header = () => {
                 "iPhone 13 ",
                 "iPhone 12",
               ]}
-              submenuSndItems={["iPhone Support", "iPhone Privacy","iCloud+"]}
+              submenuSndItems={["iPhone Support", "iPhone Privacy", "iCloud+"]}
               setSndItems={setSndItems}
             />
+                  </Link>
             <HoverMenuButton
               label="Watch"
               setIsWrapperOpen={setIsWrapperOpen}
@@ -137,7 +149,7 @@ const Header = () => {
                 "Apple Books",
                 "App Store",
               ]}
-              submenuSndItems={["Apple TV + Support","Apple Music Support"]}
+              submenuSndItems={["Apple TV + Support", "Apple Music Support"]}
               setSndItems={setSndItems}
             />
 
@@ -154,19 +166,19 @@ const Header = () => {
                 "Music",
                 "TV",
               ]}
-              submenuSndItems={["Apple TV + Support","Apple Music Support"]}
-              setSndItems={setSndItems}
-              
-            />
-            <HoverMenuButton
-              label=" Where to Buy"
-              setIsWrapperOpen={setIsWrapperOpen}
-              setItems={setItems}
-              submenuItems={["Authorixed Resellers", "Service & Support"]}
-              submenuSndItems={["Apple TV + Support","Apple Music Support"]}
+              submenuSndItems={["Apple TV + Support", "Apple Music Support"]}
               setSndItems={setSndItems}
             />
-            
+            <Link to="where-to-buy">
+              <HoverMenuButton
+                label=" Where to Buy"
+                setIsWrapperOpen={setIsWrapperOpen}
+                setItems={setItems}
+                submenuItems={["Authorixed Resellers", "Service & Support"]}
+                submenuSndItems={["Explore All Way to Buy"]}
+                setSndItems={setSndItems}
+              />
+            </Link>
           </nav>
           <div>
             <div className="search-icon">
@@ -196,13 +208,14 @@ const Header = () => {
             </ul>
             <ul id="list" className="custom-list-style">
               {itemsSnd.map((item) => (
-                <li key={item}><small>{item}</small></li>
+                <li key={item}>
+                  <small>{item}</small>
+                </li>
               ))}
             </ul>
           </Box>
         </Container>
       </AppBar>
- 
     </div>
   );
 };

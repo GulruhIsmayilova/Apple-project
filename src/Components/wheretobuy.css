@@ -1,0 +1,57 @@
+/* styles.css */
+body {
+  border-top: 1px solid transparent;
+  margin-top: -1px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* styles.css */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Sayfanın tam boyunu kaplamak için */
+  background-color: #f7f7f7; /* Arka plan rengi */
+  width: 100vw;
+}
+
+.grid-container {
+  width: 100v; /* İçerik genişliği */
+  margin: 0 auto; /* İçeriği yatayda merkeze hizalar */
+  padding: 200px; /* İçerik içi boşluklar */
+}
+
+.grid-item {
+  padding: 20px; /* Grid öğeleri arasındaki boşluklar */
+}
+
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px; /* Başlık içi boşluklar */
+  text-align: center; /* Başlığı ortalar */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Gölge efekti (isteğe bağlı) */
+}
+
+/* wheretobuy.css */
+/* wheretobuy.css */
+.custom-card-media {
+  -moz-border-top-colors: none;
+  background: #ffffff;
+  border-color: #e5e5e5 #dbdbdb #d2d2d2;
+  border-radius: 5px 5px 5px 5px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  margin-bottom: 1px;
+  padding: 20px;
+  width: 300px;
+  z-index: 0;
+  min-height: 400px;
+}

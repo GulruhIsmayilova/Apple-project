@@ -1,0 +1,90 @@
+.iphone-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    4,
+    200px
+  ); /* 4 sütunlu bir grid, her sütun 200px genişliğinde */
+  gap: 20px; /* Sütunlar ve satırlar arasında boşluk */
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.iphone {
+  width: 150px; /* iPhone'ların genişliği */
+  height: 180px; /* iPhone'ların yüksekliği */
+  margin-top: 70px;
+  margin-bottom: 500px;
+}
+
+/* iPhone14Pro.css */
+
+/* iPhone konteynerleri */
+.iphone {
+  padding: 10px; /* İçerikten çerçeveye biraz boşluk ekleyin */
+  text-align: center; /* İçeriği merkezle */
+}
+
+/* Yeni etiketi */
+.new-label {
+  color: #bf4800; /* Beyaz metin */
+  font-weight: bold; /* Kalın yazı tipi */
+  border-radius: 5px; /* Köşeleri yuvarlat */
+  padding: 5px; /* İçerik etrafına boşluk ekle */
+}
+
+/* İsim */
+.iphone-name {
+  font-size: 18px; /* Yazı tipi boyutunu büyütün */
+  font-weight: bold; /* Kalın yazı tipi */
+  margin-top: 10px; /* Üstten biraz boşluk ekleyin */
+}
+
+/* Açıklama */
+.iphone-description {
+  font-size: 14px; /* Yazı tipi boyutunu küçültün */
+  color: #888; /* Gri metin rengi */
+}
+
+/* Satın Alma Düğmesi */
+.buy-button {
+  background-color: #007bff; /* Mavi arka plan */
+  color: #fff; /* Beyaz metin */
+  border: none; /* Sınır yok */
+  padding: 5px 8px; /* Düğme boyutunu ayarlayın */
+  border-radius: 5px; /* Köşeleri yuvarlat */
+  margin-top: 10px; /* Üstten biraz boşluk ekleyin */
+  cursor: pointer; /* İşaretçiyi bir el işareti olarak değiştir */
+}
+
+/* "Daha Fazla Bilgi" Düğmesi */
+.learn-more-button {
+  background-color: #ffffff; /* Gri arka plan */
+  color: #568ffa; /* Beyaz metin */
+  border: none; /* Sınır yok */
+  padding: 10px 20px; /* Düğme boyutunu ayarlayın */
+  border-radius: 5px; /* Köşeleri yuvarlat */
+  margin-top: 10px; /* Üstten biraz boşluk ekleyin */
+  cursor: pointer; /* İşaretçiyi bir el işareti olarak değiştir */
+}
+/* iPhone14Pro.css */
+
+/* .iphone-grid'i CSS Grid olarak düzenle */
+
+/* .iphone öğelerini düzenle */
+
+/* Ekran küçüldüğünde iPhone'ları alt alta sırala */
+@media (max-width: 768px) {
+  .iphone-grid {
+    grid-template-columns: repeat(1, 1fr); /* Tek sütunlu bir grid */
+  }
+}
+
+.buy-button:focus,
+.learn-more-button:focus {
+  outline: 0;
+}
+.buy-button > a {
+  color: #fff;
+
+}
