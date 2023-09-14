@@ -1,0 +1,89 @@
+/* BuyPage.css */
+
+/* Resim container'ı */
+.image-container {
+  text-align: left; /* Resmi sol tarafta göstermek için */
+  border-radius: 180px;
+  margin-top: 70px;
+}
+
+/* Şəkilin tənzimlənməsi */
+.iphone-image {
+  width: 100%; /* Resmin genişliği */
+  max-height: 400px; /* Maksimum yükseklik */
+
+  border-radius: 20px;
+  margin-top: 50px;
+}
+
+/* Başlık ve fiyat */
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  margin-top: 60px;
+}
+
+/* Fiyatı vurgulama */
+span {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Model, Storage, Color başlıkları */
+h2 {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+/* Color seçenekleri */
+.color-options {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+
+/* Color seçenekleri arasındaki boşluk */
+.color-option {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* "Buy" düğmesi */
+.buy-button {
+  display: block;
+  margin-top: 30px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+/* BuyPage.css */
+/* BuyPage.css */
+.slide-button {
+  position: absolute;
+  top: 50%;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.slide-button.left {
+  left: 0;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.slide-button.right {
+  right: 0;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.slide-button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.chevron-left,
+.chevron-right {
+  font-size: 24px;
+}
