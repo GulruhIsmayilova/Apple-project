@@ -33,7 +33,7 @@ const iPhone14Pro = () => {
       name: "iPhone SE",
       description: "The Ultimate iPhone",
       image: "/src/image/large.4.jpg",
-      value: "$9", // Kiymet değeri
+      value: "$459", // Kiymet değeri
     },
   ];
   return (

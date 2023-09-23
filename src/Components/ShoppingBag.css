@@ -1,0 +1,16 @@
+/* ShoppingBag bileşeni için stil tanımları */
+.shopping-bag {
+  text-align: center; /* Metni ortala */
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+
+.shopping-bag-title {
+  font-size: 34px;
+  color: #333;
+}
+
+.shopping-bag-text {
+  font-size: 26px;
+  color: #777;
+}

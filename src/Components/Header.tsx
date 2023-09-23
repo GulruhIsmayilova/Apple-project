@@ -1,7 +1,8 @@
 import { AppBar, Box, Container, IconButton, Toolbar } from "@mui/material";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FaApple, FaSearch, FaShoppingBag } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { AppContext } from "./App";
 import "./Header.css";
 import HoverMenuButton from "./HoverMenuButton";
 
@@ -9,6 +10,7 @@ const Header = () => {
   const [isWrapperOpen, setIsWrapperOpen] = useState(false);
   const [items, setItems] = useState([]);
   const [itemsSnd, setSndItems] = useState([]);
+  const { state } = useContext(AppContext);
 
   return (
     <div>
@@ -27,10 +29,10 @@ const Header = () => {
           }}
         >
           <Link to="/">
-          <IconButton className="nav-button">
-            <FaApple style={{ color: "white" }} />
-            <span className="logo-text"></span>
-          </IconButton>
+            <IconButton className="nav-button">
+              <FaApple style={{ color: "white" }} />
+              <span className="logo-text"></span>
+            </IconButton>
           </Link>
           <nav
             className="nav-list"
@@ -74,38 +76,43 @@ const Header = () => {
               setSndItems={setSndItems}
             />
 
-<Link to="iphone-14">
-            <HoverMenuButton
-             
-             label="iPhone"
-              setIsWrapperOpen={setIsWrapperOpen}
-              setItems={setItems}
-              submenuItems={[
-                "Explore All iPhone ",
-                "iPhone Pro",
-                "iPhone SE",
-                "iPhone 14",
-                "iPhone 13 ",
-                "iPhone 12",
-              ]}
-              submenuSndItems={["iPhone Support", "iPhone Privacy", "iCloud+"]}
-              setSndItems={setSndItems}
-            />
-                  </Link>
-            <HoverMenuButton
-              label="Watch"
-              setIsWrapperOpen={setIsWrapperOpen}
-              setItems={setItems}
-              submenuItems={[
-                "Explore All Watch ",
-                "Apple Watch Ultra",
-                "Apple Watch Series 8",
-                "Apple Watch SE",
-                "Apple Watch Nike",
-              ]}
-              submenuSndItems={["Apple Watch Support "]}
-              setSndItems={setSndItems}
-            />
+            <Link to="iphone-14">
+              <HoverMenuButton
+                label="iPhone"
+                setIsWrapperOpen={setIsWrapperOpen}
+                setItems={setItems}
+                submenuItems={[
+                  "Explore All iPhone ",
+                  "iPhone Pro",
+                  "iPhone SE",
+                  "iPhone 14",
+                  "iPhone 13 ",
+                  "iPhone 12",
+                ]}
+                submenuSndItems={[
+                  "iPhone Support",
+                  "iPhone Privacy",
+                  "iCloud+",
+                ]}
+                setSndItems={setSndItems}
+              />
+            </Link>
+            <Link to="watch-pro">
+              <HoverMenuButton
+                label="Watch"
+                setIsWrapperOpen={setIsWrapperOpen}
+                setItems={setItems}
+                submenuItems={[
+                  "Explore All Watch ",
+                  "Apple Watch Ultra",
+                  "Apple Watch Series 8",
+                  "Apple Watch SE",
+                  "Apple Watch Nike",
+                ]}
+                submenuSndItems={["Apple Watch Support "]}
+                setSndItems={setSndItems}
+              />
+            </Link>
             <HoverMenuButton
               label=" AirPods"
               setIsWrapperOpen={setIsWrapperOpen}
@@ -185,9 +192,12 @@ const Header = () => {
               <IconButton className="nav-button">
                 <FaSearch style={{ color: "white" }} />
               </IconButton>
-              <IconButton>
-                <FaShoppingBag style={{ color: "white" }} />
-              </IconButton>
+              <Link to="shopping-bag">
+                <IconButton>
+                  <FaShoppingBag style={{ color: "white" }} />{" "}
+                  <span style={{ color: "white" }}>{state.cardCount}</span>
+                </IconButton>
+              </Link>
             </div>
           </div>
         </Toolbar>

@@ -1,0 +1,9 @@
+.order-button {
+
+    color:#2997ff; /* Metin rengi */
+    border: none; /* Kenarlık yok */
+    padding: 10px 20px; /* Yükseklik ve genişlik */
+    border-radius: 5px; /* Kenar yuvarlama */
+    cursor: pointer; /* Fare imleci tipi */
+  }
+  

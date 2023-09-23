@@ -1,18 +1,22 @@
-import React, { useState } from "react";
-import Button from "@mui/material/Button";
-import Select from "@mui/material/Select";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import InputLabel from "@mui/material/InputLabel";
+import React, { useState, useContext } from "react";
+import { AppContext } from "./App";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
+import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
-import "./BuyPage.css"; // BuyPage.css dosyasını içeri aktarın
+import FormControl from "@mui/material/FormControl";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import Select from "@mui/material/Select";
+
+import "./BuyPage.css";
 
 function BuyPage() {
   const [memory, setMemory] = useState("");
   const [storage, setStorage] = useState("");
   const [color, setColor] = useState("");
+  const [slide, setSlide] = useState(0);
+  const { dispatch } = useContext(AppContext);
 
   const handleMemoryChange = (event) => {
     setMemory(event.target.value);
@@ -25,14 +29,16 @@ function BuyPage() {
   const handleColorChange = (selectedColor) => {
     setColor(selectedColor);
   };
-  const [slide, setSlide] = useState(0); // Başlangıçta ilk resmi göster
 
   const nextSlide = () => {
-    setSlide((prevSlide) => (prevSlide + 1) % images.length); // Sonraki resmi göster
+    setSlide((prevSlide) => (prevSlide + 1) % images.length);
   };
 
   const prevSlide = () => {
-    setSlide((prevSlide) => (prevSlide - 1 + images.length) % images.length); // Önceki resmi göster
+    setSlide((prevSlide) => (prevSlide - 1 + images.length) % images.length);
+  };
+  const handleRemoveFromCart = () => {
+    dispatch({ type: "decrement", productName: "watch" });
   };
 
   const images = [
@@ -41,19 +47,27 @@ function BuyPage() {
     "/src/image/leftt.jfif",
   ];
 
+  const addToCart = () => {
+    const newCartItem = {
+      memory,
+      storage,
+      color,
+    };
+
+    dispatch({ type: "increment", productName: "watch" });
+
+    // Sepete ekleme işlemlerini burada tamamlayabilirsiniz.
+  };
+
   return (
-    <Container style={{maxWidth: "95vw"}}>
+    <Container style={{ maxWidth: "95vw" }}>
       <Grid container spacing={3}>
         <Grid item xs={12} sm={6} className="image-container">
           <Grid item xs={12} sm={12} className="image-container">
             <button className="slide-button left" onClick={prevSlide}>
               <span className="chevron-left">&#8249;</span>
             </button>
-            <img
-              src={images[slide]}
-              alt="iPhone Image"
-              className="iphone-image"
-            />
+            <img src={images[slide]} alt="iPhone Image" className="iphone-image" />
             <button className="slide-button right" onClick={nextSlide}>
               <span className="chevron-right">&#8250;</span>
             </button>
@@ -62,9 +76,7 @@ function BuyPage() {
         <Grid item xs={12} sm={6} className="content-container">
           <h1 className="main-title">Buy iPhone 14</h1>
           <p>
-            <span className="price">
-              $579.00 after trade-in ($829.00 due today)
-            </span>
+            <span className="price">$579.00 after trade-in ($829.00 due today)</span>
           </p>
 
           <Box textAlign="left" mt={4}>
@@ -155,10 +167,10 @@ function BuyPage() {
               />
             </Box>
           </Box>
-
-          <Button variant="contained" color="primary" className="buy-button">
-            Buy
+          <Button className="custom-button" onClick={addToCart}>
+        Finish the order
           </Button>
+          <Button onClick={handleRemoveFromCart}>Remove from Cart</Button>
         </Grid>
       </Grid>
     </Container>

@@ -4,14 +4,13 @@
 .image-container {
   text-align: left; /* Resmi sol tarafta göstermek için */
   border-radius: 180px;
-  margin-top: 70px;
+
 }
 
 /* Şəkilin tənzimlənməsi */
 .iphone-image {
   width: 100%; /* Resmin genişliği */
   max-height: 400px; /* Maksimum yükseklik */
-
   border-radius: 20px;
   margin-top: 50px;
 }
@@ -53,7 +52,8 @@ h2 {
   display: block;
   margin-top: 30px;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+  color: rgb(0, 245, 245);
 }
 /* BuyPage.css */
 /* BuyPage.css */
@@ -86,4 +86,8 @@ h2 {
 .chevron-left,
 .chevron-right {
   font-size: 24px;
+}
+.custom-button {
+  background-color: red; /* Düğme arka plan rengi */
+  color: rgb(235, 81, 81); /* Düğme metin rengi */
 }

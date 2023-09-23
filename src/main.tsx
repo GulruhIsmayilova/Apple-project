@@ -2,13 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import ErrorPage from "./Components/ErrorPage.jsx";
 import Home from "./Components/Home.jsx";
-import Iphone14Pro from "./Components/Iphone14Pro.tsx";
+import Iphone14Pro from "./Components/iPhone14Pro.tsx";
 import Wrapper from "./Components/Wrapper.tsx";
-import "./index.css"
-import BuyPage from './components/BuyPage';
-
-
-
+import "./index.css";
+import BuyPage from "./Components/BuyPage";
+import ShoppingBag from "./Components/ShoppingBag"; // Alışveriş sepeti bileşeni
+import Watch from "./Components/Watch";
 
 import {
   Route,
@@ -17,6 +16,7 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 import WhereToBuy from "./Components/WhereToBuy.tsx";
+import App from "./Components/App.tsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -25,8 +25,9 @@ const router = createBrowserRouter(
         <Route index element={<Home />} />
         <Route path="where-to-buy" element={<WhereToBuy />} />
         <Route path="iphone-14" element={<Iphone14Pro />} />
-        <Route path="where-to-buy/buy" element={<BuyPage/>} />
-    
+        <Route path="where-to-buy/buy" element={<BuyPage />} />
+        <Route path="shopping-bag" element={<ShoppingBag />} />
+        <Route path="watch-pro" element={<Watch />} />
       </Route>
     </Route>
   )
@@ -34,6 +35,8 @@ const router = createBrowserRouter(
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <App>
+      <RouterProvider router={router} />
+    </App>
   </React.StrictMode>
 );

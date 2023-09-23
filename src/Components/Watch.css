@@ -1,0 +1,53 @@
+.watch-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.watch-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+}
+
+.watch-image {
+  width: 100%;
+  max-height: 2000px;
+  object-fit: contain;
+}
+
+.overlay {
+  text-align: center;
+}
+.custom-watch-container {
+    /* İhtiyaç duyduğunuz stillemeleri burada uygulayabilirsiniz */
+  }
+  
+  .custom-watch-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .custom-watch-item {
+    /* İhtiyaç duyduğunuz stillemeleri burada uygulayabilirsiniz */
+  }
+  
+  .custom-watch-image {
+    /* İhtiyaç duyduğunuz stillemeleri burada uygulayabilirsiniz */
+  }
+  
+  .custom-overlay {
+    /* İhtiyaç duyduğunuz stillemeleri burada uygulayabilirsiniz */
+  }
+  
+  .custom-order-button {
+    /* İhtiyaç duyduğunuz stillemeleri burada uygulayabilirsiniz */
+  }
+  
+  .custom-learn-more-link {
+    /* İhtiyaç duyduğunuz stillemeleri burada uygulayabilirsiniz */
+  }
+  
