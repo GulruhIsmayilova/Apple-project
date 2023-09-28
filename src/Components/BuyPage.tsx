@@ -18,6 +18,11 @@ function BuyPage() {
   const [slide, setSlide] = useState(0);
   const { dispatch } = useContext(AppContext);
 
+
+  const handleAddToCart = (productName) => {
+    dispatch({ type: "increment", productName });
+  };
+
   const handleMemoryChange = (event) => {
     setMemory(event.target.value);
   };
@@ -167,7 +172,7 @@ function BuyPage() {
               />
             </Box>
           </Box>
-          <Button className="custom-button" onClick={addToCart}>
+          <Button onClick={() => handleAddToCart("iPhone X")}>
         Finish the order
           </Button>
           <Button onClick={handleRemoveFromCart}>Remove from Cart</Button>

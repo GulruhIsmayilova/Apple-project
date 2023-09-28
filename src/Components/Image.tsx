@@ -1,7 +1,5 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import './Header.css'; // CSS dosyasını dahil edin veya stil kodlarını buraya ekleyin
-import { AppContext } from './App';
-import "./image.css";
 
 interface ImageOverlayProps {
   imageUrl: string;
@@ -11,12 +9,6 @@ interface ImageOverlayProps {
 }
 
 const ImageWithOverlay: React.FC<ImageOverlayProps> = ({ imageUrl, title, subtitle, link }) => {
-  const { dispatch } = useContext(AppContext);
-
-  const handleOrderNow = (productName: string) => {
-    dispatch({ type: 'increment', productName });
-  };
-
   return (
     <div className="image-container">
       <img src={imageUrl} alt={title} className="image" />
@@ -25,8 +17,6 @@ const ImageWithOverlay: React.FC<ImageOverlayProps> = ({ imageUrl, title, subtit
         <h2 className="overlay-text">{title}</h2>
         <h3 className="overlay-text">{subtitle}</h3>
         <a href={link} className="learn-more-link">Learn more</a>
-        <button onClick={() => handleOrderNow(title)} className="order-button">Order Now</button>
-      
       </div>
     </div>
   );
@@ -52,7 +42,7 @@ const App: React.FC = () => {
       <ImageWithOverlay
         imageUrl="/src/Image/hero_macbook_air_15_midnight__ct0pgwizvree_mediumtall.jpg"
         title="MacBook Air 15"
-        subtitle="Impressively big. Impossibly thin."
+        subtitle="Impressively big. Impossibly thin.<"
         link="#"
       />
     </div>

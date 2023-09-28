@@ -64,28 +64,26 @@
   color: #007bff;
   font-size: 20px;
 }
-/* Hamburger Menü Stilleri */
+/* Hamburger Menu */
 .hamburger-menu {
   position: relative;
 }
 
 .nav-button {
   display: block;
-  margin-left: 10px; /* İstediğiniz aralığı ayarlayabilirsiniz */
+  margin-left: 10px;
   cursor: pointer;
 }
 
 .menu-list {
   display: none;
-  /* Diğer menü stilleri */
 }
 
 .menu-list.open {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 44px; /* AppBar yüksekliğine göre ayarlayın */
+  top: 44px;
   right: 0;
   background-color: rgba(0, 0, 0, 0.8);
-  /* Diğer açık menü stilleri */
 }

@@ -1,12 +1,15 @@
 import React, { useContext } from "react";
 import { AppContext } from "./App";
 import "./Watch.css";
+import { Link, useNavigate } from "react-router-dom";
 
 function Watch() {
   const { dispatch } = useContext(AppContext);
+  const navigate = useNavigate();
 
   const handleAddToCart = (productName) => {
     dispatch({ type: "increment", productName });
+    navigate("/buy");
   };
 
   return (
@@ -20,7 +23,7 @@ function Watch() {
         <div className="overlay">
           <p>$799</p>
           <p>Available starting 9.22</p>
-          <button onClick={() => handleAddToCart("Watch 1")}>Order now</button>
+          <button onClick={() => handleAddToCart(" Apple Watch ")}>Order now</button>
           <a href="#">Learn more</a>
         </div>
       </div>
@@ -33,7 +36,7 @@ function Watch() {
         <div className="overlay">
           <p>$799</p>
           <p>Available starting 9.22</p>
-          <button onClick={() => handleAddToCart("Watch 2")}>Order now</button>
+          <button onClick={() => handleAddToCart("Watch Se")}>Order now</button>
           <a href="#">Learn more</a>
         </div>
       </div>
@@ -46,7 +49,7 @@ function Watch() {
         <div className="overlay">
           <p>$799</p>
           <p>Available starting 9.22</p>
-          <button onClick={() => handleAddToCart("Watch 3")}>Order now</button>
+          <button onClick={() => handleAddToCart("Apple Watch Series 9")}>Order now</button>
           <a href="#">Learn more</a>
         </div>
         <div className="custom-watch-container">
@@ -66,7 +69,7 @@ function Watch() {
         <p>All the essentials.</p>
         <p>Light on price.</p>
         <p>From $249</p>
-        <button onClick={() => handleAddToCart("Watch 1")}>Order now</button>
+        <button onClick={() => handleAddToCart("Apple Watch Ultra 2")}>Order now</button>
         <a href="#" className="custom-learn-more-link">Learn more</a>
       </div>
     </div>

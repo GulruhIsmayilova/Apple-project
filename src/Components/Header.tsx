@@ -11,6 +11,7 @@ const Header = () => {
   const [items, setItems] = useState([]);
   const [itemsSnd, setSndItems] = useState([]);
   const { state } = useContext(AppContext);
+  
 
   return (
     <div>
@@ -59,22 +60,24 @@ const Header = () => {
               ]}
               setSndItems={setSndItems}
             />
-            <HoverMenuButton
-              label="iPad"
-              setIsWrapperOpen={setIsWrapperOpen}
-              setItems={setItems}
-              submenuItems={[
-                "Explore All iPad",
-                "iPad Pro",
-                "iPad mini",
-                "iPad Air",
-                "iPad",
-                "Apple Pencil",
-                "Keyboards",
-              ]}
-              submenuSndItems={["iPad support", "iCloud+"]}
-              setSndItems={setSndItems}
-            />
+            <Link to="ipad-pro">
+              <HoverMenuButton
+                label="iPad"
+                setIsWrapperOpen={setIsWrapperOpen}
+                setItems={setItems}
+                submenuItems={[
+                  "Explore All iPad",
+                  "iPad Pro",
+                  "iPad mini",
+                  "iPad Air",
+                  "iPad",
+                  "Apple Pencil",
+                  "Keyboards",
+                ]}
+                submenuSndItems={["iPad support", "iCloud+"]}
+                setSndItems={setSndItems}
+              />
+            </Link>
 
             <Link to="iphone-14">
               <HoverMenuButton
@@ -97,6 +100,7 @@ const Header = () => {
                 setSndItems={setSndItems}
               />
             </Link>
+
             <Link to="watch-pro">
               <HoverMenuButton
                 label="Watch"

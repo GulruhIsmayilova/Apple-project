@@ -1,59 +1,146 @@
-import { Link } from "react-router-dom";
-import "./iPhone14Pro.css"; // İhtiyaç duyarsanız stil dosyasını ekleyin
+import React, { useContext } from "react";
+import { AppContext } from "./App";
+import "./iPhone14Pro.css";
+import { Link, useNavigate } from "react-router-dom";
 
-const iPhone14Pro = () => {
-  const iPhones = [
-    {
-      color: "Space Gray",
-      isNew: true,
-      name: "iPhone 14 Pro",
-      description: "The Ultimate iPhone",
-      image: "/src/image/large.jpg",
-      value: "$999", // Kiymet değeri
-    },
-    {
-      color: "Silver",
-      isNew: true,
-      name: "iPhone 14 ",
-      description: "The Ultimate iPhone",
-      image: "/src/image/lage2.jpg",
-      value: "$799", // Kiymet değeri
-    },
-    {
-      color: "Gold",
-      isNew: true,
-      name: "iPhone 13",
-      description: "The Ultimate iPhone",
-      image: "/src/image/large3.jpg",
-      value: "$599", // Kiymet değeri
-    },
-    {
-      color: "Midnight Green",
-      isNew: true,
-      name: "iPhone SE",
-      description: "The Ultimate iPhone",
-      image: "/src/image/large.4.jpg",
-      value: "$459", // Kiymet değeri
-    },
-  ];
+function iPhone14Pro() {
+  const { dispatch } = useContext(AppContext);
+  const navigate = useNavigate();
+
+  const handleAddToCart = (productName) => {
+    dispatch({ type: "increment", productName });
+    navigate("/buy");
+  };
+
   return (
-    <div className="iphone-grid">
-      {iPhones.map((iphone, index) => (
-        <div key={index} className="iphone">
-          <img src={iphone.image} alt={`iPhone 14 Pro ${iphone.color}`} />
-          {iphone.isNew && <div className="new-label">New</div>}
-          <div className="iphone-name">{iphone.name}</div>
-          <div className="iphone-description">{iphone.description}</div>
-          <div className="iphone-value">From {iphone.value}</div>
-          {/* Kiymet değeri */}
-          <button className="buy-button">
-            <Link to="/where-to-buy/buy">Buy</Link>
+    <div className="iphone14pro-page">
+      <div className="iphone14pro-item">
+        <img
+          src="/src/image/iphoneesas.jpg"
+          alt="iPhone 14 Pro 1"
+          className="iphone14pro-image"
+        />
+        <div className="overlay">
+          <p>$799</p>
+          <p>Available starting 9.22</p>
+          <button onClick={() => handleAddToCart(" iPhone 14 Pro ")}>
+            Order now
           </button>
-          <button className="learn-more-button">Learn More</button>
+          <a href="#">Learn more</a>
         </div>
-      ))}
+      </div>
+      <div className="iphone14pro-item">
+        <img
+          src="/src/image/hero iphonw2.jpg"
+          alt="iPhone 14 Pro 2"
+          className="iphone14pro-image"
+        />
+        <div className="overlay">
+          <p>$799</p>
+          <p>Available starting 9.22</p>
+          <button onClick={() => handleAddToCart("iPhone 14 Pro")}>
+            Order now
+          </button>
+          <a href="#">Learn more</a>
+        </div>
+      </div>
+      <div className="iphone14pro-item">
+        <img
+          src="/src/image/hero iphone5.jpg"
+          alt="iPhone 14 Pro 3"
+          className="iphone14pro-image"
+        />
+        <div className="overlay">
+          <p>$799</p>
+          <p>Available starting 9.22</p>
+          <button onClick={() => handleAddToCart("iPhone 14 Pro Series 9")}>
+            Order now
+          </button>
+          <a href="#">Learn more</a>
+        </div>
+      </div>
+      <div className="custom-watch-container">
+        <h2 style={{ textAlign: "center", fontSize: "64px" }}>
+          Which iPhone is right for you?
+        </h2>
+        <div className="custom-watch-items">
+          <div className="custom-watch-item">
+            <img
+              src="/src/image/large.jpg"
+              alt="Apple Watch SE"
+              className="custom-watch-image"
+            />
+            <div className="custom-overlay">
+              <h3>Apple Watch SE</h3>
+              <p>The ultimate iPhone.</p>
+            
+              <p>From $249</p>
+              <button onClick={() => handleAddToCart("iPhone SE")}>
+                Order now
+              </button>
+              <a href="#" className="custom-learn-more-link">
+                Learn more
+              </a>
+            </div>
+          </div>
+          <div className="custom-watch-item">
+            <img
+              src="/src/image/lage2.jpg"
+              alt="Apple Watch Series 7"
+              className="custom-iphone-image"
+            />
+            <div className="custom-overlay">
+              <h3>Apple Watch Series 7</h3>
+              <p>A total powerhouse..</p>
+              <p>From $399</p>
+              <button onClick={() => handleAddToCart("iPhone 13 Pro")}>
+                Order now
+              </button>
+              <a href="#" className="custom-learn-more-link">
+                Learn more
+              </a>
+            </div>
+          </div>
+          <div className="custom-iphone-item">
+            <img
+              src="/src/image/large3.jpg"
+              alt="Apple Watch Series 6"
+              className="custom-watch-image"
+            />
+            <div className="custom-overlay">
+              <h3>Apple Watch Series 6</h3>
+              <p>As amazing as ever.</p>
+              <p>From $349</p>
+              <button onClick={() => handleAddToCart("iPhone 13")}>
+                Order now
+              </button>
+              <a href="#" className="custom-learn-more-link">
+                Learn more
+              </a>
+            </div>
+          </div>
+          <div className="custom-iphone-item">
+            <img
+              src="/src/image/large.4.jpg"
+              alt="Apple Watch Series 6"
+              className="custom-watch-image"
+            />
+            <div className="custom-overlay">
+              <h3>Apple Watch Series 6</h3>
+              <p>Serious power. Serious value.</p>
+              <p>From $349</p>
+              <button onClick={() => handleAddToCart("iPhone 14 Pro ")}>
+                Order now
+              </button>
+              <a href="#" className="custom-learn-more-link">
+                Learn more
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
-};
+}
 
 export default iPhone14Pro;
