@@ -1,5 +1,5 @@
 import React from 'react';
-import './Header.css'; // CSS dosyasını dahil edin veya stil kodlarını buraya ekleyin
+import './Header.css'; 
 
 interface ImageOverlayProps {
   imageUrl: string;

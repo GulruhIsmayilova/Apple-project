@@ -16,11 +16,11 @@ const HoverMenuButton: React.FC<HoverMenuButtonProps> = ({
   setItems,
   setIsWrapperOpen,
   submenuSndItems,
-  setSndItems
+  setSndItems,
 }) => {
   const handleMouseEnter = () => {
     setItems(submenuItems);
-    setSndItems(submenuSndItems)
+    setSndItems(submenuSndItems);
     setIsWrapperOpen(true);
   };
   const handleMouseLeave = () => {
@@ -34,11 +34,13 @@ const HoverMenuButton: React.FC<HoverMenuButtonProps> = ({
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <Typography variant="body1" sx={{ color: "#fbfbfd" }}>
+        <Typography
+          variant="body1"
+          sx={{ color: "rgb(255 255 255 / 80%)", fontSize: "small" }}
+        >
           {label}
         </Typography>
       </IconButton>
-      
     </Box>
   );
 };

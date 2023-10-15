@@ -20,7 +20,6 @@ function BuyPage() {
 
   // Accessing the context
   const { dispatch } = useContext(AppContext);
-  
 
   // Function to handle adding the product to the cart
   const handleAddToCart = (productName) => {
@@ -54,15 +53,11 @@ function BuyPage() {
 
   // Function to handle removing the product from the cart
   const handleRemoveFromCart = () => {
-    dispatch({ type: "decrement", productName: "iPhone" });
+    dispatch({ type: "decrement", productName: "watch" });
   };
 
   // Product images
-  const images = [
-    "/src/image/pinkforme.jfif",
-    "/src/image/left.jfif",
-    "/src/image/leftt.jfif",
-  ];
+  const images = ["/src/image/watch1.jpg", "/src/image/watch2.jpg"];
 
   // Function to add the selected product to the cart
   const addToCart = () => {
@@ -72,8 +67,11 @@ function BuyPage() {
       color,
     };
 
-    dispatch({ type: "increment", productName: "iPhone", imageURL: "/src/image/large.jpg" });
-    // You can complete the cart addition logic here.
+    dispatch({
+      type: "increment",
+      productName: "Watch",
+      imageURL: "/src/image/saat2.jpg",
+    });
   };
 
   // Render the component
@@ -87,7 +85,7 @@ function BuyPage() {
             </button>
             <img
               src={images[slide]}
-              alt="iPhone Image"
+              alt="Apple Watch Image"
               className="iphone-image"
             />
             <button className="slide-button right" onClick={nextSlide}>
@@ -96,12 +94,13 @@ function BuyPage() {
           </Grid>
         </Grid>
         <Grid item xs={12} sm={6} className="content-container">
-          <h1 className="main-title">Buy iPhone 14</h1>
+          <h1 className="main-title">Buy Apple Watch Ultra 2</h1>
           <p>
             <span className="price">
               $579.00 after trade-in ($829.00 due today)
             </span>
           </p>
+
           <Box textAlign="left" mt={4}>
             <h2>Model</h2>
             <p>
@@ -118,8 +117,8 @@ function BuyPage() {
                   id: "memory-select",
                 }}
               >
-                <MenuItem value="iPhone14">iPhone 14</MenuItem>
-                <MenuItem value="iPhone14Plus">iPhone 14+</MenuItem>
+                <MenuItem value="AppleWatchSE">Apple Watch SE</MenuItem>
+                <MenuItem value="AppleWatch">Apple Watch</MenuItem>
               </Select>
             </FormControl>
           </Box>
@@ -190,9 +189,11 @@ function BuyPage() {
               />
             </Box>
           </Box>
-          <button onClick={() => addToCart("iPad", "/src/image/large.4.jpg", "iPhone")}>
-        Finish the order
-        </button>
+          <button
+            onClick={() => addToCart("iPad", "/src/image/ipad1.png", "ipad")}
+          >
+            Finish the order
+          </button>
         </Grid>
       </Grid>
     </Container>

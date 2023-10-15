@@ -1,53 +1,52 @@
 /* BuyPage.css */
 
-/* Resim container'ı */
+/* Image container */
 .image-container {
-  text-align: left; /* Resmi sol tarafta göstermek için */
+  text-align: left; /* To display the image on the left */
   border-radius: 180px;
-
 }
 
-/* Şəkilin tənzimlənməsi */
+/* Styling for the image */
 .iphone-image {
-  width: 100%; /* Resmin genişliği */
-  max-height: 400px; /* Maksimum yükseklik */
+  width: 100%; /* Image width */
+  max-height: 400px; /* Maximum height */
   border-radius: 20px;
   margin-top: 50px;
 }
 
-/* Başlık ve fiyat */
+/* Title and price */
 h1 {
   font-size: 24px;
   margin-bottom: 20px;
   margin-top: 60px;
 }
 
-/* Fiyatı vurgulama */
+/* Emphasizing the price */
 span {
   font-weight: bold;
   font-size: 18px;
 }
 
-/* Model, Storage, Color başlıkları */
+/* Model, Storage, Color headings */
 h2 {
   font-size: 20px;
   margin-top: 20px;
 }
 
-/* Color seçenekleri */
+/* Color options */
 .color-options {
   display: flex;
   justify-content: flex-start;
   margin-top: 10px;
 }
 
-/* Color seçenekleri arasındaki boşluk */
+/* Spacing between color options */
 .color-option {
   margin-right: 10px;
   cursor: pointer;
 }
 
-/* "Buy" düğmesi */
+/* "Buy" button */
 .buy-button {
   display: block;
   margin-top: 30px;
@@ -55,8 +54,10 @@ h2 {
   margin-bottom: 10px;
   color: rgb(0, 245, 245);
 }
+
 /* BuyPage.css */
-/* BuyPage.css */
+
+/* Slide buttons */
 .slide-button {
   position: absolute;
   top: 50%;
@@ -67,27 +68,33 @@ h2 {
   transition: background-color 0.3s ease;
 }
 
+/* Left slide button */
 .slide-button.left {
   left: 0;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
 }
 
+/* Right slide button */
 .slide-button.right {
   right: 0;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
 }
 
+/* Hover effect for slide buttons */
 .slide-button:hover {
   background-color: rgba(255, 255, 255, 0.9);
 }
 
+/* Chevron icons for slide buttons */
 .chevron-left,
 .chevron-right {
   font-size: 24px;
 }
+
+/* Custom button styling */
 .custom-button {
-  background-color: red; /* Düğme arka plan rengi */
-  color: rgb(235, 81, 81); /* Düğme metin rengi */
+  background-color: red; /* Button background color */
+  color: rgb(235, 81, 81); /* Button text color */
 }

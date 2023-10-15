@@ -1,45 +1,51 @@
 /* styles.css */
+
+/* Style for the body element */
 body {
-  border-top: 1px solid transparent;
-  margin-top: -1px;
+  border-top: 1px solid transparent; /* Add a transparent border to the top */
+  margin-top: -1px; /* Offset margin to align content correctly */
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: flex; /* Use flex for layout */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
 }
 
-/* styles.css */
+/* Center class for vertical and horizontal alignment */
 .center {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Sayfanın tam boyunu kaplamak için */
-  background-color: #f7f7f7; /* Arka plan rengi */
-  width: 100vw;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Cover the entire viewport height */
+  background-color: #f7f7f7; /* Set background color */
+  width: 100vw; /* Cover the entire viewport width */
 }
 
+/* Style for the grid container */
 .grid-container {
-  width: 100v; /* İçerik genişliği */
-  margin: 0 auto; /* İçeriği yatayda merkeze hizalar */
-  padding: 200px; /* İçerik içi boşluklar */
+  width: 100v; /* Content width */
+  margin: 0 auto; /* Center content horizontally */
+  padding: 200px; /* Inner padding */
 }
 
+/* Style for grid items */
 .grid-item {
-  padding: 20px; /* Grid öğeleri arasındaki boşluklar */
+  padding: 20px; /* Spacing between grid items */
 }
 
+/* Style for a fixed header */
 .fixed-header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 10px; /* Başlık içi boşluklar */
-  text-align: center; /* Başlığı ortalar */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Gölge efekti (isteğe bağlı) */
+  padding: 10px; /* Header padding */
+  text-align: center; /* Center-align header text */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
 }
 
 /* wheretobuy.css */
-/* wheretobuy.css */
+
+/* Style for custom card media */
 .custom-card-media {
   -moz-border-top-colors: none;
   background: #ffffff;

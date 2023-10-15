@@ -5,6 +5,7 @@ export const AppContext = createContext(null);
 function reducer(state, action) {
   if (action.type === "increment") {
     const index = state.findIndex((s) => s.productName === action.productName);
+
     if (index !== -1) {
       const cardCount = state[index].cardCount;
       const stateCopy = state.slice();
@@ -12,7 +13,9 @@ function reducer(state, action) {
       stateCopy.push({
         cardCount: cardCount + 1,
         productName: action.productName,
-        imageURL: "/src/image/ipad mini.png", // Resim URL'sini burada ekliyoruz
+        imageURL: action.imageURL,
+        id: action.id,
+        price: action.price, // Add the new product price
       });
       return stateCopy;
     }
@@ -22,13 +25,21 @@ function reducer(state, action) {
       {
         cardCount: 1,
         productName: action.productName,
-        imageURL: "/src/image/ipad mini.png", // Resim URL'sini burada ekliyoruz
+        imageURL: action.imageURL,
+        price: action.price, // Add the new product price
       },
     ];
   } else if (action.type === "decrement") {
-    // action.productName
-    return { cardCount: state.cardCount - 1 };
+    // Handling decrement action (You need to implement this part)
+    // ...
+    return state;
+  } else if (action.type === "remove") {
+    // If the action type is "remove," remove the product from the state
+    return state.filter(
+      (product) => product.productName !== action.productName
+    );
   }
+
   throw Error("Unknown action.");
 }
 

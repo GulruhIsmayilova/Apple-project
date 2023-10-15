@@ -1,16 +1,23 @@
-/* ShoppingBag bileşeni için stil tanımları */
+/* Styles for the ShoppingBag component */
+
+/* Center align the content vertically and horizontally */
 .shopping-bag {
-  text-align: center; /* Metni ortala */
-  margin-top: 200px;
-  margin-bottom: 200px;
+  text-align: center; /* Center-align the text */
+  margin-top: 200px; /* Add top margin */
+  margin-bottom: 200px; /* Add bottom margin */
+  display: flex; /* Use flex to center vertically and horizontally */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
 }
 
+/* Style for the shopping bag title */
 .shopping-bag-title {
-  font-size: 34px;
-  color: #333;
+  font-size: 34px; /* Set the font size */
+  color: #333; /* Set the text color */
 }
 
+/* Style for the shopping bag text */
 .shopping-bag-text {
-  font-size: 26px;
-  color: #777;
+  font-size: 26px; /* Set the font size */
+  color: #777; /* Set the text color */
 }

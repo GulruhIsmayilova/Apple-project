@@ -1,40 +1,41 @@
 /* footer.css */
 
-/* Footer bileşeninin ana konteynerini stilleyin */
-
+/* Style the main container of the Footer component */
 .footer-container {
-  background-color: #f5f5f7; /* Arka plan rengini değiştirin */
-  color: #0a0a0c; /* Metin rengini beyaza ayarlayın */
-  padding: 100px; /* İsteğe bağlı bir iç kenarlık ekleyin */
+  background-color: #f5f5f7; /* Change the background color */
+  color: #0a0a0c; /* Set text color to white */
+  padding: 18px; /* Add optional padding */
   text-decoration: none;
-  width: 90vw;
+  width: 95vw;
   margin-top: 30px;
 }
 
-/* Listeleri stilleyin */
+/* Style the lists */
 .footer-list {
-  list-style: none; /* Noktalama işaretlerini kaldırın */
-  padding: 0; /* Listenin iç kenarlığını kaldırın */
+  list-style: none; /* Remove bullet points */
+  padding: 0; /* Remove list padding */
   color: #050505;
   text-decoration: none;
+  font-size: 12px;
+  color: #424245;
 }
 
 .footer-item {
-  margin-bottom: 8px; /* Her liste öğesi arasında biraz boşluk bırakın */
+  margin-bottom: 8px; /* Add some spacing between list items */
   color: #0f0e0e;
   line-height: 1.5;
-  font-size: 14px;
+  font-size: 12px;
   text-decoration: none;
 }
 
-/* Bağlantıları stilleyin */
+/* Style the links */
 a {
-  color: #26262c; /* Bağlantı rengini beyaza ayarlayın */
-  text-decoration: none; /* Alt çizgiyi kaldırın */
+  color: #26262c; /* Set link color to white */
+  text-decoration: none; /* Remove underlines */
 }
 
 a:hover {
-  text-decoration: underline; /* Fare üzerine geldiğinde alt çizgi ekleyin */
+  text-decoration: underline; /* Add underline on hover */
 }
 
 ul.footer-list {
@@ -44,6 +45,7 @@ ul.footer-list {
 }
 
 ul.footer-list li a {
-  color: #000000; /* Metin rengini istediğiniz renkle değiştirin */
+  color: #424245; /* Change text color to your desired color */
   text-decoration: none;
+  font-size: 14px;
 }

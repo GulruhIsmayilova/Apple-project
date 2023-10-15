@@ -1,14 +1,14 @@
 import React, { useContext } from "react";
 import { AppContext } from "./App";
 import "./iPhone14Pro.css";
+import "./NewiPadPro.css";
 import { Link, useNavigate } from "react-router-dom";
-
+import Button from "@mui/material/Button";
 function iPhone14Pro() {
   const { dispatch } = useContext(AppContext);
   const navigate = useNavigate();
 
   const handleAddToCart = (productName) => {
-    dispatch({ type: "increment", productName });
     navigate("/buy");
   };
 
@@ -22,11 +22,18 @@ function iPhone14Pro() {
         />
         <div className="overlay">
           <p>$799</p>
-          <p>Available starting 9.22</p>
-          <button onClick={() => handleAddToCart(" iPhone 14 Pro ")}>
-            Order now
-          </button>
-          <a href="#">Learn more</a>
+          <div className="button-container">
+            <Button
+              variant="outlined"
+              className="order-button"
+              onClick={() => handleAddToCart(" iPhone 14 Pro ")}
+            >
+              Order Now
+            </Button>
+            <div className="centered-link">
+              <Link to="/learn-more">Learn more</Link>
+            </div>
+          </div>
         </div>
       </div>
       <div className="iphone14pro-item">
@@ -37,11 +44,18 @@ function iPhone14Pro() {
         />
         <div className="overlay">
           <p>$799</p>
-          <p>Available starting 9.22</p>
-          <button onClick={() => handleAddToCart("iPhone 14 Pro")}>
-            Order now
-          </button>
-          <a href="#">Learn more</a>
+          <div className="button-container">
+            <Button
+              variant="outlined"
+              className="order-button"
+              onClick={() => handleAddToCart("iPhone 14 Pro")}
+            >
+              Order Now
+            </Button>
+            <div className="centered-link">
+              <Link to="/learn-more">Learn more</Link>
+            </div>
+          </div>
         </div>
       </div>
       <div className="iphone14pro-item">
@@ -52,11 +66,18 @@ function iPhone14Pro() {
         />
         <div className="overlay">
           <p>$799</p>
-          <p>Available starting 9.22</p>
-          <button onClick={() => handleAddToCart("iPhone 14 Pro Series 9")}>
-            Order now
-          </button>
-          <a href="#">Learn more</a>
+          <div className="button-container">
+            <Button
+              variant="outlined"
+              className="order-button"
+              onClick={() => handleAddToCart("iPhone 14 Pro Series 9")}
+            >
+              Order Now
+            </Button>
+            <div className="centered-link">
+              <Link to="/learn-more">Learn more</Link>
+            </div>
+          </div>
         </div>
       </div>
       <div className="custom-watch-container">
@@ -73,14 +94,19 @@ function iPhone14Pro() {
             <div className="custom-overlay">
               <h3>Apple Watch SE</h3>
               <p>The ultimate iPhone.</p>
-            
               <p>From $249</p>
-              <button onClick={() => handleAddToCart("iPhone SE")}>
-                Order now
-              </button>
-              <a href="#" className="custom-learn-more-link">
-                Learn more
-              </a>
+              <div className="button-container">
+                <Button
+                  variant="outlined"
+                  className="order-button"
+                  onClick={() => handleAddToCart("iPhone SE")}
+                >
+                  Order Now
+                </Button>
+                <div className="centered-link">
+                  <Link to="/learn-more">Learn more</Link>
+                </div>
+              </div>
             </div>
           </div>
           <div className="custom-watch-item">
@@ -91,14 +117,20 @@ function iPhone14Pro() {
             />
             <div className="custom-overlay">
               <h3>Apple Watch Series 7</h3>
-              <p>A total powerhouse..</p>
+              <p>A total powerhouse.</p>
               <p>From $399</p>
-              <button onClick={() => handleAddToCart("iPhone 13 Pro")}>
-                Order now
-              </button>
-              <a href="#" className="custom-learn-more-link">
-                Learn more
-              </a>
+              <div className="button-container">
+                <Button
+                  variant="outlined"
+                  className="order-button"
+                  onClick={() => handleAddToCart("iPhone 13 Pro")}
+                >
+                  Order Now
+                </Button>
+                <div className="centered-link">
+                  <Link to="/learn-more">Learn more</Link>
+                </div>
+              </div>
             </div>
           </div>
           <div className="custom-iphone-item">
@@ -111,12 +143,18 @@ function iPhone14Pro() {
               <h3>Apple Watch Series 6</h3>
               <p>As amazing as ever.</p>
               <p>From $349</p>
-              <button onClick={() => handleAddToCart("iPhone 13")}>
-                Order now
-              </button>
-              <a href="#" className="custom-learn-more-link">
-                Learn more
-              </a>
+              <div className="button-container">
+                <Button
+                  variant="outlined"
+                  className="order-button"
+                  onClick={() => handleAddToCart("iPhone 13")}
+                >
+                  Order Now
+                </Button>
+                <div className="centered-link">
+                  <Link to="/learn-more">Learn more</Link>
+                </div>
+              </div>
             </div>
           </div>
           <div className="custom-iphone-item">
@@ -129,12 +167,18 @@ function iPhone14Pro() {
               <h3>Apple Watch Series 6</h3>
               <p>Serious power. Serious value.</p>
               <p>From $349</p>
-              <button onClick={() => handleAddToCart("iPhone 14 Pro ")}>
-                Order now
-              </button>
-              <a href="#" className="custom-learn-more-link">
-                Learn more
-              </a>
+              <div className="button-container">
+                <Button
+                  variant="outlined"
+                  className="order-button"
+                  onClick={() => handleAddToCart("iPhone 14 Pro ")}
+                >
+                  Order Now
+                </Button>
+                <div className="centered-link">
+                  <Link to="/learn-more">Learn more</Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>

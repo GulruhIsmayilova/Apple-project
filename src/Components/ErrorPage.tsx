@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Error.css"; // Footer bileşenine özel stil dosyasını içe aktarın
+import "./Error.css"; // Import the custom style file for the Footer component
 
-
+// Functional component for displaying an error message
 const ErrorPage = ({ errorMessage }) => {
   return (
     <div>

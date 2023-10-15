@@ -3,15 +3,21 @@ import "./footer.css"; // Footer bileşenine özel stil dosyasını içe aktarı
 
 const Footer = () => {
   return (
-    <div className="footer-container">
+    <div className="footer-container-rm">
       {/* Footer bileşeni için stil sınıfını ekleyin */}
       <Grid
         container
         direction="row"
-        justifyContent="center"
+        justifyContent="space-evenly"
         alignItems="flex-start"
+        style={{ padding: 8,  backgroundColor: '#f5f5f7', /* Arkaplan rengini değiştirin */
+        color: '#0a0a0c', /* Metin rengini beyaza ayarlayın */
+   
+        textDecoration: 'none',
+        width: '100%',
+        marginTop: '30px', }}
       >
-        <Grid item xs={3}>
+        <Grid item xs={12} md={6} lg={"auto"}>
           <Typography variant="h6">Explore</Typography>
           <ul className="footer-list">
             <li className="footer-item">
@@ -37,14 +43,12 @@ const Footer = () => {
             </li>
           </ul>
         </Grid>
-        <Grid container xs={3} direction="column">
+        <Grid container xs={12} md={6} lg={"auto"} direction="column">
           <Grid item xs={6}>
             <Typography variant="h6">Entertainment</Typography>
             <ul className="footer-list">
-              {" "}
               {/* ul öğesine sınıf ekleyin */}
               <li className="footer-item">
-                {" "}
                 {/* li öğesine sınıf ekleyin */}
                 <Link href="#">Apple One</Link>
               </li>
@@ -71,10 +75,8 @@ const Footer = () => {
           <Grid item xs={6}>
             <Typography variant="h6">Account</Typography>
             <ul className="footer-list">
-              {" "}
               {/* ul öğesine sınıf ekleyin */}
               <li className="footer-item">
-                {" "}
                 {/* li öğesine sınıf ekleyin */}
                 <Link href="#">Manage Your Apple ID</Link>
               </li>
@@ -84,26 +86,22 @@ const Footer = () => {
             </ul>
           </Grid>
         </Grid>
-        <Grid item xs={3}>
+        <Grid item xs={12} md={6} lg={"auto"}>
           <Typography variant="h6">For Business</Typography>
           <ul className="footer-list">
-            {" "}
             {/* ul öğesine sınıf ekleyin */}
             <li className="footer-item">
-              {" "}
               {/* li öğesine sınıf ekleyin */}
               <Link href="#">Apple and Business</Link>
             </li>
           </ul>
         </Grid>
-        <Grid container xs={3} direction="column">
+        <Grid container xs={12} md={6} lg={"auto"} direction="column">
           <Grid item xs={6}>
             <Typography variant="h6">About Apple</Typography>
             <ul className="footer-list">
-              {" "}
               {/* ul öğesine sınıf ekleyin */}
               <li className="footer-item">
-                {" "}
                 {/* li öğesine sınıf ekleyin */}
                 <Link href="#">Career Opportunities</Link>
               </li>
@@ -118,10 +116,8 @@ const Footer = () => {
           <Grid item xs={6}>
             <Typography variant="h6">Apple Values</Typography>
             <ul className="footer-list">
-              {" "}
               {/* ul öğesine sınıf ekleyin */}
               <li className="footer-item">
-                {" "}
                 {/* li öğesine sınıf ekleyin */}
                 <Link href="#">Accessibility</Link>
               </li>
@@ -136,20 +132,18 @@ const Footer = () => {
         </Grid>
       </Grid>
 
-      <Grid container spacing={2}>
-        <Grid item xs={6}>
-          <Typography variant="body2">
-            &copy; {new Date().getFullYear()} Copyright © 2023 Apple Inc. All
-            rights reserved.
-          </Typography>
-        </Grid>
-        <Grid item xs={6}>
-          <Typography variant="body2" align="right">
-            Azerbaijan
-          </Typography>
-        </Grid>
-      </Grid>
-      
+      <Grid container style={{ backgroundColor: "#f5f5f7", color: "#0a0a0c" }}>
+  <Grid item xs={12} md={6}>
+    <Typography variant="body2">
+      &copy; {new Date().getFullYear()} Copyright © 2023 Apple Inc. All rights reserved.
+    </Typography>
+  </Grid>
+  <Grid item xs={12} md={6}>
+    <Typography variant="body2" align="right">
+      Azerbaijan
+    </Typography>
+  </Grid>
+</Grid>
     </div>
   );
 };
