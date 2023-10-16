@@ -17,7 +17,7 @@ function NewiPadPro() {
         <img
           src="/src/image/ipad_hero__d0tgmaq6shm6_large.jpg"
           alt="Watch 1"
-          className="watch-image"
+          className="watch-image3"
         />
         <div className="overlay">
           <p>$799</p>

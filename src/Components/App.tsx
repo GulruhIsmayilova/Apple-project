@@ -15,7 +15,7 @@ function reducer(state, action) {
         productName: action.productName,
         imageURL: action.imageURL,
         id: action.id,
-        price: action.price, // Add the new product price
+        price: action.price, 
       });
       return stateCopy;
     }
@@ -26,7 +26,7 @@ function reducer(state, action) {
         cardCount: 1,
         productName: action.productName,
         imageURL: action.imageURL,
-        price: action.price, // Add the new product price
+        price: action.price, 
       },
     ];
   } else if (action.type === "decrement") {

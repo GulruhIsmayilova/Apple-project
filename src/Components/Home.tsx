@@ -9,11 +9,11 @@ export default function Home() {
       <ImageWithText />
       <Container>
         <Grid container spacing={3}>
-          {/* İstədiyiniz sayda `ImageCard` əlavə edə bilərsiniz */}
+          {/* You can add as many `ImageCard` components as you want */}
           <ImageCard
             imageSrc="/src/image/promo_apple_event_september__c1zbjahmv18i_medium.jpg"
             title="Apple Event"
-            description="Watch online on 9/12 at 10 a.m. PT.."
+            description="Watch online on 9/12 at 10 a.m. PT."
           />
 
           <ImageCard
@@ -44,8 +44,6 @@ export default function Home() {
           />
         </Grid>
       </Container>
-      
-      
     </>
   );
 }

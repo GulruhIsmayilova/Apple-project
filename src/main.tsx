@@ -1,7 +1,7 @@
 // Import necessary modules and components
 import React from "react";
 import ReactDOM from "react-dom/client";
-import ErrorPage from "./Components/ErrorPage.jsx";
+import ErrorPage from "./Components/ErrorPage.tsx";
 import Home from "./Components/Home.tsx";
 import Iphone14Pro from "./Components/iPhone14Pro.tsx";
 import Wrapper from "./Components/Wrapper.tsx";
@@ -24,8 +24,8 @@ import BuyPageiPad from "./Components/BuyPageIPad.tsx";
 // Create a BrowserRouter and define routes using createRoutesFromElements
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Wrapper />} errorElement={<ErrorPage />}>
-      <Route errorElement={<ErrorPage />}>
+    <Route path="/" element={<Wrapper />} errorElement="{<ErrorPage />}">
+      <Route errorElement="{<ErrorPage />}">
         {/* Define various routes and their corresponding components */}
         <Route index element={<Home />} />
         <Route path="where-to-buy" element={<WhereToBuy />} />

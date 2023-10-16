@@ -15,11 +15,13 @@ function Watch() {
   return (
     <div className="watch-page">
       <div className="watch-item">
-        <img
-          src="/src/image/watch2.jpg"
-          alt="Watch 1"
-          className="watch-image"
-        />
+       <div className="black-background">
+  <img
+    src="/src/image/watch2.jpg"
+    alt="Watch 1"
+    className="watch-image1"
+  />
+</div>
         <div className="overlay">
           <p>$799</p>
           <p>Available starting 9.22</p>
@@ -39,7 +41,7 @@ function Watch() {
       </div>
       <div className="watch-item">
         <img
-          src="/src/image/watch1.jpg"
+          src="/src/image/hero_larglast.jpg"
           alt="Watch 2"
           className="watch-image"
         />

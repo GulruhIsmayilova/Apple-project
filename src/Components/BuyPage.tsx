@@ -20,7 +20,6 @@ function BuyPage() {
 
   // Accessing the context
   const { dispatch } = useContext(AppContext);
-  
 
   // Function to handle adding the product to the cart
   const handleAddToCart = (productName) => {
@@ -72,7 +71,11 @@ function BuyPage() {
       color,
     };
 
-    dispatch({ type: "increment", productName: "iPhone", imageURL: "/src/image/large.jpg" });
+    dispatch({
+      type: "increment",
+      productName: "iPhone",
+      imageURL: "/src/image/large.jpg",
+    });
     // You can complete the cart addition logic here.
   };
 
@@ -190,9 +193,13 @@ function BuyPage() {
               />
             </Box>
           </Box>
-          <button onClick={() => addToCart("iPad", "/src/image/large.4.jpg", "iPhone")}>
-        Finish the order
-        </button>
+          <button
+            onClick={() =>
+              addToCart("iPad", "/src/image/large.4.jpg", "iPhone")
+            }
+          >
+            Finish the order
+          </button>
         </Grid>
       </Grid>
     </Container>

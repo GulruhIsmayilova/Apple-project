@@ -71,8 +71,11 @@ function BuyPage() {
       color,
     };
 
-    dispatch({ type: "increment", productName: "iPad", imageURL: "/src/image/ipad1.png" });
-
+    dispatch({
+      type: "increment",
+      productName: "iPad",
+      imageURL: "/src/image/ipad1.png",
+    });
 
     // You can complete the cart addition logic here.
   };
@@ -192,10 +195,12 @@ function BuyPage() {
               />
             </Box>
           </Box>
-  
-        <button onClick={() => addToCart("iPad", "/src/image/ipad1.png", "ipad")}>
-        Finish the order
-        </button>
+
+          <button
+            onClick={() => addToCart("iPad", "/src/image/ipad1.png", "ipad")}
+          >
+            Finish the order
+          </button>
         </Grid>
       </Grid>
     </Container>

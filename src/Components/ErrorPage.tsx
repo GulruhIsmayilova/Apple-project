@@ -1,14 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Error.css"; // Import the custom style file for the Footer component
+import "./Error.css";
 
-// Functional component for displaying an error message
-const ErrorPage = ({ errorMessage }) => {
+interface ErrorPageProps {
+  errorMessage: string;
+}
+
+const ErrorPage: React.FC<ErrorPageProps> = ({ errorMessage }) => {
   return (
     <div>
       <h1>Oops! An error occurred.</h1>
       <p>{errorMessage}</p>
-      <Link to="/">Return to Home Page</Link>
+      <Link to="/">Back to Home</Link>
+      
     </div>
   );
 };

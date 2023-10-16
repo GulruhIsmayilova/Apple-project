@@ -1,14 +1,6 @@
 /* footer.css */
 
 /* Style the main container of the Footer component */
-.footer-container {
-  background-color: #f5f5f7; /* Change the background color */
-  color: #0a0a0c; /* Set text color to white */
-  padding: 18px; /* Add optional padding */
-  text-decoration: none;
-  width: 95vw;
-  margin-top: 30px;
-}
 
 /* Style the lists */
 .footer-list {
@@ -48,4 +40,13 @@ ul.footer-list li a {
   color: #424245; /* Change text color to your desired color */
   text-decoration: none;
   font-size: 14px;
+}
+/* footer.css */
+.footer-container {
+  background-color: rgb(
+    245,
+    245,
+    247
+  ); /* Arka plan rengini burada belirleyin */
+  width: 100%;
 }

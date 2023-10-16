@@ -1,32 +1,66 @@
+/* Styles for a watch page container */
 .watch-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: flex; /* Display elements as a flex container */
+  flex-direction: column; /* Arrange items vertically */
+  align-items: center; /* Center items horizontally */
 }
 
+/* Styles for individual watch items */
 .watch-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 1rem;
+  display: flex; /* Display elements as a flex container */
+  flex-direction: column; /* Arrange items vertically */
+  align-items: center; /* Center items horizontally */
+  margin: 1rem; /* Add spacing around each item */
 }
 
+/* Styles for watch item images */
 .watch-image {
-  width: 100%;
-  max-height: 2000px;
-  object-fit: contain;
-  margin-top: 8px;
+  width: 100%; /* Set the image width to the full viewport width */
+  max-height: 2000px; /* You can adjust the maximum height as desired */
+  object-fit: contain; /* Resize image to maintain aspect ratio */
+  margin-top: 8px; /* Add spacing at the top of the image */
 }
 
+/* Styles for elements with a black background */
+.black-background {
+  background-color: black;
+  /* Other style properties can be added here */
+}
+
+/* Styles for overlay text */
 .overlay {
-  text-align: center;
+  text-align: center; /* Center text horizontally */
 }
 
-.custom-watch-container {}
+/* Custom styles for a watch container */
+.custom-watch-container {
+  /* Add custom container styles if needed */
+}
 
+/* Custom styles for a group of watch items */
 .custom-watch-items {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  display: flex; /* Display elements as a flex container */
+  flex-direction: row; /* Arrange items horizontally */
+  justify-content: space-between; /* Space items evenly horizontally */
+  align-items: center; /* Center items vertically */
+}
+
+/* Custom styles for a container with the class 'azu' */
+.azu {
+  display: flex; /* Display elements as a flex container */
+  justify-content: space-between; /* Space items evenly horizontally */
+  align-items: center; /* Center items vertically */
+  width: 50%; /* Share the page horizontally by 50% */
+}
+
+/* Custom styles for an image within the 'azu' container */
+.watch-img-azu {
+  max-width: 50%; /* Set the maximum width of the image (adjust as needed) */
+  object-fit: contain; /* Resize image to maintain aspect ratio */
+}
+
+/* Custom styles for text within the 'azu' container */
+.watch-text-azu {
+  flex-grow: 1; /* Allow the text area to grow and fill available space */
+  margin-left: 20px; /* Add spacing between the image and text */
 }
